@@ -1,8 +1,12 @@
-<section>
+<section class="fileUpload">
   <div class="container">
-    <img [src]="url" title="user" height="80px" width="80px">
-    <br><br>
-    <input type="file" id="img" (change)="onSelect($event)" style="display: none;">
-   <label for="img">Upload Image</label>
+    <form action="" [formGroup]="uploadForm">
+      <img [src]="url" title="user" height="80px" width="80px">
+      <br><br>
+      <input type="file" id="img" (change)="onSelect($event)" formControlName="profilePhoto"
+        style="display: none;position: relative;">
+      <label for="img"> <img src="../assets/images/Vector (2).png" id="img" class="img-fluid"></label>
+    </form>
   </div>
+
 </section>
